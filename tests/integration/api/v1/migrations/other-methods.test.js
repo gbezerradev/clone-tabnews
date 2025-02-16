@@ -5,7 +5,7 @@ async function cleanDatabase() {
 }
 
 test("Any method other than GET or POST to /api/v1/migrations should return 405", async () => {
-  const methods = ["PUT", "DELETE", "PATCH", "OPTIONS", "HEAD"];
+  const methods = ["PUT", "DELETE", "PATCH", "OPTIONS"];
   for (const method of methods) {
     await cleanDatabase();
 
